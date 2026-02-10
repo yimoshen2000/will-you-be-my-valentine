@@ -16,46 +16,28 @@ const answers_no = {
         "I am begging you to stop!",
         "Ok, Let's just start over.."
     ],
-    french: [
-        "Non",
-        "Tu es sûr ?",
-        "Tu es vraiment sûr ??",
-        "Tu es vraiment vraiment sûr ???",
-        "Réfléchis encore?",
-        "Tu ne crois pas aux deuxièmes chances ?",
-        "Pourquoi tu es si froid?",
-        "Peut-être, on peut en parler ?",
-        "Je ne vais pas demander encore une fois!",
-        "D'accord, maintenant ca me fait mal!",
-        "Tu es juste méchant!",
-        "Pourquoi tu me fais ça?",
-        "Donnez-moi une chance plz!",
-        "Je te supplie d'arrêter!",
-        "D'accord, recommençons.."
-    ],
-    thai: [
-        "ไม่อ่ะ",
-        "แน่ใจจริงๆหรอคะ?",
-        "แน่ใจจริงๆ จริงๆนะคะ?",
-        "อย่าบอกนะว่านี่แน่ใจสุดๆแล้วจริงๆ ?",
-        "ลองคิดดูอีกทีหน่อยสิคะ..",
-        "ขอโอกาศที่สองทีค่ะ..",
-        "อย่าเย็นชาสิคะ กระซิกๆ",
-        "ขอร้องนะคะ",
-        "น้าาาๆๆๆๆๆ",
-        "เราจะร้องไห้เอานะ กระซิกๆ",
-        "จะเอางี้ๆจริงหรอคะ",
-        "ฮือออออ",
-        "ขอโอกาศครั้งที่สองที่ค่ะ!",
-        "ขอร้องละค่าาา",
-        "โอเคค่ะ.. งั้นเริ่มใหม่ !"
+    chinese: [
+        "不要",
+        "你确定吗？",
+        "你真的确定吗？？",
+        "你真的真的确定吗？？？",
+        "再想想？",
+        "不相信第二次机会吗？",
+        "为什么这么冷漠？",
+        "也许我们可以谈谈？",
+        "我不会再问了！",
+        "好吧，现在这伤害了我的感情！",
+        "你现在太刻薄了！",
+        "你为什么要这样对我？",
+        "请给我一个机会！",
+        "我求你停下来！",
+        "好吧，让我们重新开始.."
     ]
 };
 
 answers_yes = {
     "english": "Yes",
-    "french": "Oui",
-    "Thailand": "เย่ คืนดีกันแล้วน้า"
+    "chinese": "好"
 }
 
 let language = "english"; // Default language is English
@@ -123,10 +105,8 @@ function changeLanguage() {
 
     // Update question heading
     const questionHeading = document.getElementById("question-heading");
-    if (language === "french") {
-        questionHeading.textContent = "Tu veux être mon valentin?";
-    } else if (language === "thai") {
-        questionHeading.textContent = "คืนดีกับเราได้อ่ะป่าว?";
+    if (language === "chinese") {
+        questionHeading.textContent = "你愿意做我的情人吗？";
     } else {
         questionHeading.textContent = "Will you be my valentine?";
     }
@@ -143,10 +123,8 @@ function changeLanguage() {
 
     // Update success message
     const successMessage = document.getElementById("success-message");
-    if (language === "french") {
-        successMessage.textContent = "Yepppie, à bientôt :3";
-    } else if (language === "thai") {
-        successMessage.textContent = "ฮูเร่ คืนดีกันแล้วน้า :3";
+    if (language === "chinese") {
+        successMessage.textContent = "太好了，很快见 :3";
     } else {
         successMessage.textContent = "Yepppie, see you sooonnn :3";
     }
